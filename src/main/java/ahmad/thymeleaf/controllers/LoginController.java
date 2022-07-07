@@ -19,7 +19,12 @@ public class LoginController {
         return "loginform";
     }
 
-    @RequestMapping(value = {"/dologin"}, method = RequestMethod.POST)
+    @RequestMapping(value = {"/logout-success"}, method = RequestMethod.GET)
+    public String yourLoggedOut() {
+        return "logout-success";
+    }
+
+//    @RequestMapping(value = {"/dologin"}, method = RequestMethod.POST)
     public String dologin(@Valid LoginCommand loginCommand, BindingResult bindingResult){
 
         if(bindingResult.hasErrors()){
