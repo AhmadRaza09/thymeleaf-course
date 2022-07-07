@@ -21,4 +21,9 @@ public class IndexController {
 
         return "index";
     }
+
+    @RequestMapping(value = {"/secured"}, method = RequestMethod.GET)
+    public String secured(){
+        return "secured";
+    }
 }
